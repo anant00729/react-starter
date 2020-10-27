@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 // import { DESKTOP_VIEWPORT } from 'common/styles'
 import { XS, SM, MD, LG, XL } from 'common/styles'
+import Paper from '@material-ui/core/Paper'
+import Button from '@material-ui/core/Button'
 
 export const Container = styled.div`
   border: 10px solid purple;
@@ -11,10 +13,12 @@ export const Container = styled.div`
   @media ${SM} {
     padding: 20px;
   }
+
+  display: flex;
+  flex-direction: column;
 `
 
 export const HomeWrapper = styled.div`
-  margin: 0 20px;
   height: 100%;
   display: grid;
   border: 10px solid yellow;
@@ -23,7 +27,7 @@ export const HomeWrapper = styled.div`
   row-gap: 15px;
 
   @media ${XS} {
-    grid-template-columns: 100px 100px auto;
+    grid-template-columns: auto auto;
   }
 
   @media ${SM} {
@@ -42,7 +46,24 @@ export const HomeWrapper = styled.div`
     grid-template-columns: 100px auto auto;
   }
 `
-export const HomeContainer = styled.div`
-  border: 10px solid green;
+export const HomeContainer = styled(Paper)`
+  background: linear-gradient(45deg, #fe6888, #ff8e53);
   height: 100px;
+`
+
+export const HomeButton = styled(Button)`
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+  padding: 5px 30px;
+  background: linear-gradient(45deg, #fe6888, #ff8e53);
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0;
+`
+
+export const ButtonContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 `
