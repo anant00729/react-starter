@@ -1,0 +1,3 @@
+src/**/*.test.js
+*/**/App.test.js
+src/serviceWorker.js
