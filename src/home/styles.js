@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { XS, SM, MD, LG, XL } from 'common/styles'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
+import Alert from '@material-ui/lab/Alert'
 
 export const Container = styled.div`
   border: 10px solid purple;
@@ -27,7 +28,7 @@ export const HomeWrapper = styled.div`
   row-gap: 15px;
 
   @media ${XS} {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 
   @media ${SM} {
@@ -39,7 +40,7 @@ export const HomeWrapper = styled.div`
   }
 
   @media ${LG} {
-    grid-template-columns: 100px 800px auto;
+    grid-template-columns: 100px 600px auto;
   }
 
   @media ${XL} {
@@ -66,4 +67,8 @@ export const ButtonContainer = styled.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
+`
+
+export const HomeAlert = styled(Alert)`
+  background: linear-gradient(45deg, #fe6888, #ff8e53);
 `

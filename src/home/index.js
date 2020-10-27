@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   HomeWrapper,
   HomeContainer,
   Container,
   HomeButton,
-  ButtonContainer
+  ButtonContainer,
+  HomeAlert
 } from './styles'
+import Snackbar from '@material-ui/core/Snackbar'
 
 const Home = () => {
+  const [open, setOpen] = useState(false)
+
   const handleClick = () => {
-    // console.log('Hello all')
+    setOpen(true)
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
   }
 
   return (
@@ -27,6 +39,11 @@ const Home = () => {
           Open success snackbar
         </HomeButton>
       </ButtonContainer>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <HomeAlert elevation={6} variant='filled'>
+          This is a success message!
+        </HomeAlert>
+      </Snackbar>
     </Container>
   )
 }
