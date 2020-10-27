@@ -1,11 +1,18 @@
 import React from 'react'
-import { BackgroundWrapper } from './styles'
+import { HomeWrapper, HomeContainer, Container } from './styles'
 
 const Home = () => {
   return (
-    <div>
-      <BackgroundWrapper />
-    </div>
+    <Container>
+      <HomeWrapper>
+        <HomeContainer id='home-container' />
+        <HomeContainer id='home-container' />
+        <HomeContainer id='home-container' />
+        <HomeContainer id='home-container' />
+        <HomeContainer id='home-container' />
+        <HomeContainer id='home-container' />
+      </HomeWrapper>
+    </Container>
   )
 }
 
