@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
@@ -19,14 +21,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build:sandbox": "env-cmd -f .env.sandbox react-scripts build",
+    "build:dev": "env-cmd -f .env.development react-scripts build",
+    "test": "react-scripts test --watchAll=false --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:css": "stylelint \"src/**/*.js\""
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [

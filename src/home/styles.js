@@ -1,7 +1,5 @@
-import styled, { css } from "styled-components";
-import { DESKTOP_VIEWPORT } from "common/styles";
-import Flex from "common/Flex";
-import { ZINDEX_LEVELS } from "common/constants";
+import styled from 'styled-components'
+// import { DESKTOP_VIEWPORT } from 'common/styles'
 
 export const BackgroundWrapper = styled.div`
   width: 100%;
@@ -10,4 +8,4 @@ export const BackgroundWrapper = styled.div`
   flex-direction: column;
   object-fit: scale-down;
   position: relative;
-`;
+`
